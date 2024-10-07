@@ -1,0 +1,419 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: bisque;
+}
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-height: 600px; /* Adjust maximum height */
+    overflow: hidden; 
+    padding: 0px;
+    margin: 0px;
+ 
+}
+
+/* Carousel Image Styles */
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    transition: transform 0.8s ease-in-out; /* Smooth transition between images */
+}
+
+/* Add a slight zoom effect during transition */
+.carousel-item.active img {
+    transform: scale(1.05); /* Slight zoom in on active slide */
+}
+
+/* Indicator Styles */
+.carousel-indicators button {
+    background-color: #fff; /* Change dot color */
+    opacity: 0.7; /* Set initial opacity */
+}
+
+.carousel-indicators button.active {
+    background-color: #007bff; /* Active dot color */
+    opacity: 1; /* Fully opaque when active */
+}
+
+/* Control Button Styles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for controls */
+    border-radius: 50%; /* Round the control icons */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    color: #fff; /* Icon color */
+}
+
+/* Hide default controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust control button width */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Position control buttons */
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+/* Container styling */
+.container-fluid {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light background to make it pop */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flexbox for two columns */
+.anniversary-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Each column styling */
+.anniversary-column {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis to make columns */
+    margin: 10px;
+}
+
+/* Styling for headings and text */
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .anniversary-column {
+        flex: 1 1 100%; /* Make columns stack on mobile */
+    }
+}
+
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+h2{
+    color:  rgb(255, 255, 255);
+    text-align: center;
+}
+.search-input{
+    width: 600px;
+    margin-left: 60px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5PX;
+    font-size: 16px;
+    transition: all 0.3 ease;
+}
+.search-input:focus{
+    border-color: #4CAF50;
+    box-shadow: #044;
+}
+.submit-btn{
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover{
+    background-color: aquamarine;
+
+}
+.about-us p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-us p:first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f2a900;
+}
+
+.about-us p:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 30px 15px;
+    }
+
+    .about-us h2 {
+        font-size: 28px;
+    }
+
+    .about-us p {
+        font-size: 16px;
+    }
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 300px;
+    height: 400px; /* Fixed height for the card */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(5, 177, 230, 0.1);
+    margin: 20px auto;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    position: relative; /* Make the card a relative positioning context */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the card without distortion */
+}
+
+.card-content {
+    position: absolute; /* Absolute positioning inside the card */
+    bottom: 0; /* Aligns the text to the bottom of the card */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3, .card-content p {
+    margin: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #f2a900;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-section ul li a:hover {
+    color: #f2a900;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-icons li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.social-icons li a img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 10px;
+}
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures the nav is on top */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #f2a900;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures the footer is on top */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Ensure footer text doesn't overlap */
+footer .footer-bottom {
+    padding: 5px 0;
+    font-size: 10px;
+}
+
+/* Adjust body padding to avoid content being hidden by fixed elements */
+body {
+    padding-top: 60px;  /* Adjust this value based on your nav height */
+    padding-bottom: 60px;  /* Adjust this value based on your footer height */
+}
+.about-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.about-us h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+

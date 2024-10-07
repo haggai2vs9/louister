@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color:  #029aeb;
+    font-size: 36px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+/* About Us Section */
+.about-us {
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #026e8f;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Each Column Styling */
+.about-us .column {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect to each column */
+.about-us .column:hover {
+    transform: translateY(-10px);
+    background-color: #ecf0f1;
+}
+
+/* Paragraphs Styling */
+.about-us .column p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Modern Styled Borders */
+.about-us .column p {
+    border-left: 4px solid #16a085;
+    padding-left: 10px;
+}
+
+/* Heading in About Us */
+.about-us h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .about-us .column {
+        min-width: 100%;
+    }
+
+    .about-us .column p {
+        font-size: 14px;
+    }
+}
+/* Back Button Styles */
+.back-button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #16a085;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design for the Button */
+@media (max-width: 768px) {
+    .back-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+/* General styling */
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f8fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Services Section */
+  .services-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #009ed8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .services-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #029aeb;
+    margin-bottom: 30px;
+  }
+  
+  /* Flexbox Layout for Three Columns */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Individual Service Styling */
+  .service {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis (taking up 30% of the container) */
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #1e90ff;
+    background-color: #f9fafc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-right: 15px; /* Space between columns */
+  }
+  
+  /* Reset last item margin-right to avoid overflow */
+  .service:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  .service h3 {
+    font-size: 1.8em;
+    color: #1e90ff;
+    margin-bottom: 15px;
+  }
+  
+  .service p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+  
+  /* List Styling */
+  .service ul {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .service ul li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    color: #333;
+    position: relative;
+  }
+  
+  .service ul li::before {
+    content: "\2022";
+    color: #1e90ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Hover Effect */
+  .service:hover {
+    background-color: #eef3f9;
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .service {
+      flex: 1 1 45%; /* Two columns for tablet view */
+      margin-right: 15px;
+    }
+  
+    .service:nth-child(3n) {
+      margin-right: 15px;
+    }
+  
+    .service:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 15px;
+    }
+  
+    .services-container {
+      flex-direction: column;
+    }
+  
+    .service {
+      flex: 1 1 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+  
+    .services-section h2 {
+      font-size: 2em;
+    }
+  
+    .service h3 {
+      font-size: 1.6em;
+    }
+  }
+  
